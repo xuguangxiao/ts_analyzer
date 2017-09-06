@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Menlo-Regular.ttf</file>
+    </qresource>
+</RCC>

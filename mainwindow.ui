@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>565</width>
+    <height>386</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TS Stream Analyzer</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tabStreamView">
+       <attribute name="title">
+        <string>Stream</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QTreeWidget" name="treeWidgetStreamPacketList">
+          <column>
+           <property name="text">
+            <string notr="true">1</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabFFmpegAVPacketView">
+       <attribute name="title">
+        <string>FFmpeg AVPacket</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QTableWidget" name="tableWidgetFFmpegAVPacketList"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabTSPacketView">
+       <attribute name="title">
+        <string>TS Packet</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayoutTSView"/>
+      </widget>
+      <widget class="QWidget" name="tabPESPacketView">
+       <attribute name="title">
+        <string>PES Packet</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayoutPESView"/>
+      </widget>
+      <widget class="QWidget" name="tabH264NALView">
+       <attribute name="title">
+        <string>H.264 NAL</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="0" column="0">
+         <widget class="QTableWidget" name="tableWidgetH264NALList"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Info</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QTableWidget" name="tableWidgetInfo"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>565</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile_F">
+    <property name="title">
+     <string>File(&amp;F)</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout_A">
+    <property name="title">
+     <string>About(&amp;A)</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuView_V">
+    <property name="title">
+     <string>View(&amp;V)</string>
+    </property>
+    <addaction name="actionStream"/>
+    <addaction name="actionFFmpeg_AVPacket"/>
+    <addaction name="actionTS_Packet"/>
+    <addaction name="actionPES_Packet_P"/>
+    <addaction name="actionH_264_NAL_N"/>
+   </widget>
+   <widget class="QMenu" name="menuPlay_P">
+    <property name="title">
+     <string>Play(&amp;P)</string>
+    </property>
+    <addaction name="actionPlay_Stream"/>
+   </widget>
+   <widget class="QMenu" name="menuPacket_K">
+    <property name="title">
+     <string>Packet(&amp;K)</string>
+    </property>
+    <addaction name="actionEnable_Selected_Packets"/>
+    <addaction name="actionDisable_Selected_Packets"/>
+   </widget>
+   <addaction name="menuFile_F"/>
+   <addaction name="menuView_V"/>
+   <addaction name="menuPacket_K"/>
+   <addaction name="menuPlay_P"/>
+   <addaction name="menuAbout_A"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open(&amp;O)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit(&amp;X)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About ts analyzer(&amp;A)</string>
+   </property>
+  </action>
+  <action name="actionStream">
+   <property name="text">
+    <string>Stream(&amp;S)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+1</string>
+   </property>
+  </action>
+  <action name="actionFFmpeg_AVPacket">
+   <property name="text">
+    <string>FFmpeg AVPacket(&amp;F)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+2</string>
+   </property>
+  </action>
+  <action name="actionTS_Packet">
+   <property name="text">
+    <string>TS Packet(&amp;T)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+3</string>
+   </property>
+  </action>
+  <action name="actionPES_Packet_P">
+   <property name="text">
+    <string>PES Packet(&amp;P)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+4</string>
+   </property>
+  </action>
+  <action name="actionH_264_NAL_N">
+   <property name="text">
+    <string>H.264 NAL(&amp;N)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+5</string>
+   </property>
+  </action>
+  <action name="actionPlay_Stream">
+   <property name="text">
+    <string>Play Stream(&amp;P)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionEnable_Selected_Packets">
+   <property name="text">
+    <string>Enable Selected Packet(s)</string>
+   </property>
+   <property name="toolTip">
+    <string>Enable selected packet(s) while playing stream</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+E</string>
+   </property>
+  </action>
+  <action name="actionDisable_Selected_Packets">
+   <property name="text">
+    <string>Disable Selected Packet(s)</string>
+   </property>
+   <property name="toolTip">
+    <string>Disable selected packet(s) while playing stream</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+D</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
